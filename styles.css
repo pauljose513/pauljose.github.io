@@ -17,16 +17,15 @@ body {
     z-index: 2; /* Ensure section1 is on top */
 }
 
-.section2 {
+.section {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #ffffff; /* Light background color */
     color: #000000; /* Contrast text color */
-    transition: background-color 0.3s ease; /* Smooth background color transition */
-    position: relative;
-    z-index: 1; /* Ensure section2 is behind section1 */
+    font-family: Arial, sans-serif;
+    text-align: center;
 }
 
 .content {
@@ -46,9 +45,9 @@ h1, h2 {
         font-size: 7vw;
     }
 }
+
 .navbar {
     position: fixed;
-    font-family:'Courier New', Courier, monospace;
     top: 0;
     left: 0;
     width: 100%;
@@ -65,20 +64,26 @@ h1, h2 {
     justify-content: space-around; /* Items evenly spaced */
 }
 
-.navbar li {
-    flex: 1; /* Each item spans equal width */
-    text-align: center;
-}
-
 .navbar a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
     display: block;
     padding: 10px 0;
+    opacity: 1; /* Initial opacity */
 }
+
+.navbar a.hidden {
+    opacity: 0; /* Hide links with opacity */
+    pointer-events: none; /* Disable pointer events for hidden links */
+}
+
 
 .navbar a:hover {
     color: #2e2e2e; /* Lighter color on hover */
+}
+
+.hidden {
+    display: none;
 }
