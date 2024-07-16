@@ -1,7 +1,8 @@
+
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family:'Courier New', Courier, monospace;
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
@@ -12,19 +13,82 @@ body {
     align-items: center;
     background-color: #000000; /* Dark background color */
     color: #4c00ffb6; /* Contrast text color */
+    font-family: Arial, sans-serif;
     transition: background-color 0.3s ease; /* Smooth background color transition */
     position: relative;
     z-index: 2; /* Ensure section1 is on top */
 }
 
-.section {
-    height: 100vh;
+.section2 {
+    height: 10vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    background-color: #000000; /* Light background color */
+    color: #ffffff81; /* Contrast text color */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.section3 {
+    margin-top: 1vb;
+    padding-top: 5vb;
+    height: 100vb;
+    display: flex;
+    justify-content: center;
+    align-items: normal;
+    background-color: #00000050; /* Light background color */
+    color: #000000c6; /* Contrast text color */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-bottom: 10vb;
+}
+ul {
+    list-style-type:"";  
+    color: #333;
+    padding: 10px;
+}
+  
+
+.section4 {
+
+    margin-top: 1vb;
+    padding-top: 5vb;
+    height: 100vb;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #11141065; /* Light background color */
+    background-color: #00000050; /* Light background color */
     color: #000000c6; /* Contrast text color */
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-bottom: 10vb;
+}
+
+.section5 {
+    margin-top: 1vb;
+    padding-top: 5vb;
+    height: 100vb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000050; /* Light background color */
+    color: #000000c6; /* Contrast text color */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding-bottom: 10vb;
+}
+
+.section6 {
+    margin-top: 1vb;
+    padding-top: 5vb;
+    height: 100vb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000050; /* Light background color */
+    color: #000000c6; /* Contrast text color */
+    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
