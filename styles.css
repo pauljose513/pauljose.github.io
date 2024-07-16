@@ -11,7 +11,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #000000; /* Dark background color */
-    color: #ffffff; /* Contrast text color */
+    color: #4c00ffb6; /* Contrast text color */
     transition: background-color 0.3s ease; /* Smooth background color transition */
     position: relative;
     z-index: 2; /* Ensure section1 is on top */
@@ -22,8 +22,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff; /* Light background color */
-    color: #000000; /* Contrast text color */
+    background-color: #11141065; /* Light background color */
+    color: #000000c6; /* Contrast text color */
     font-family: Arial, sans-serif;
     text-align: center;
 }
@@ -65,10 +65,10 @@ h1, h2 {
 }
 
 .navbar a {
-    color: #ffffff;
+    color: #626262;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s ease, opacity 0.3s ease; /* Add opacity transition */
+    transition: color 0.5s ease, opacity 0.5s ease; /* Add opacity transition */
     display: block;
     padding: 10px 0;
     opacity: 1; /* Initial opacity */
@@ -81,7 +81,7 @@ h1, h2 {
 
 
 .navbar a:hover {
-    color: #2e2e2e; /* Lighter color on hover */
+    color: #ffffff; /* Lighter color on hover */
 }
 
 .hidden {
