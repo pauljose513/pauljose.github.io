@@ -25,7 +25,7 @@ body {
     justify-content:center;
     align-items:center;
     background-color: #000000; /* Light background color */
-    color: #ffffff81; /* Contrast text color */
+    color: aquamarine; /* Contrast text color */
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
@@ -37,7 +37,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: normal;
-    background-color: #00000050; /* Light background color */
+    background-color: aquamarine; /* Light background color */
     color: #000000c6; /* Contrast text color */
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
@@ -80,6 +80,19 @@ ul {
 }
 
 .section6 {
+    margin-top: 1vb;
+    padding-top: 5vb;
+    height: 100vb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000050; /* Light background color */
+    color: #000000c6; /* Contrast text color */
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.section7 {
     margin-top: 1vb;
     padding-top: 5vb;
     height: 100vb;
@@ -151,4 +164,23 @@ h1, h2 {
 
 .hidden {
     display: none;
+}
+
+.container-split {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    height: 100vh;
+    background-color: aquamarine;
+}
+.study-time {
+    display: flex; /* Enables flexbox for potential content placement */
+    flex-direction: column; /* Stacks content vertically */
+    border-right: 2px solid black; /* Defines a left border as the line */
+    padding-top: 10vh;
+    height: 80vh; /* Set the height to 100% viewport height */
+}
+.study-item {
+    padding-left: 5vb;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
 }
