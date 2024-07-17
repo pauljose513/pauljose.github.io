@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paul Jose - Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+
 </head>
 <body>
     <section id="home" class="section1">
         <div class="content">
-            <h1>Hi, I am Paul Jose, a Software Engineer</h1>
+            <h1>Hi, I am Paul Jose, a Software Dev</h1>
         </div>
     </section>
 
@@ -24,100 +27,141 @@
                 <li><a href="#contact">CONTACT</a></li>
             </ul>
         </nav>
-        <div class="content">
-            <h2>Welcome to my portfolio 💻</h2>
-        </div>
-    </section>
-    
-    <section id="studies" class="section3">
-        <div class="content">
-            <h2>Studies</h2>
-            <div class="container-split">
-                <div class="study-time">.</div>
-                <div class="study-item">
-                    <div>
-                        <h3>Bachelor of Technology in Computer Science and Engineering (CSE)</h3>
-                        <p><strong>APJ Abdul Kalam Technological University, Kerala</strong><br>
-                        August 2018 – August 2022</p>
-                        <ul>
-                            <li>Graduated with a CGPA of 7.43/10</li>
-                            <li>Relevant Courses: Object Oriented Programming; Data Structures and Algorithms; Data Warehousing; Computer Networks; Cryptography; Data Science; Database Management Systems</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>Plus Two - Computer Science</h3>
-                        <p><strong>Mar Basil Higher Secondary School, Kothamanagalam, Kerala</strong><br>
-                        August 2016 – August 2018</p>
-                        <ul>
-                            <li>Obtained an overall percentage of 78.5</li>
-                            <li>Relevant Courses: Computer Science; Physics; Chemistry; Mathematics</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3>SSLC/10th</h3>
-                        <p><strong>St. Joseph's H S S, Paingottoor, Kerala</strong><br>
-                        July 2015 – March 2016</p>
-                        <ul>
-                            <li>Scored an overall of 90%</li>
-                        </ul>
-                    </div>
+        <div class="split">
+            <div class="content">
+                <h2>Welcome to my portfolio 💻</h2>
+            </div>
+            <div class="content">
+                <p>Charting the Course of Time</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider-values">
+                    <span class="slider-label" style="left: 0%;">March 2016</span>
+                    <span class="slider-label" style="left: 10%;">August 2016</span>
+                    <span class="slider-label" style="left: 19.5%;">March 2018</span>
+                    <span class="slider-label" style="left: 30.5%;">August 2018</span>
+                    <span class="slider-label" style="left: 40%;">September 2021</span>
+                    <span class="slider-label" style="left: 50%;">October 2021</span>
+                    <span class="slider-label" style="left: 60%;">May 2022</span>
+                    <span class="slider-label" style="left: 69.5%;">August 2022</span>
+                    <span class="slider-label" style="left: 80.5%;">November 2022</span>
+                    <span class="slider-label" style="left: 89.5%;">November 2023</span>
+                    <span class="slider-label" style="left: 100%;">March 2024</span>
                 </div>
+                <input type="range" id="year-slider" min="0" max="10" step="1" value="7">
+                <div id="current-value">2020</div>
             </div>
-            
         </div>
     </section>
     
-    
-    <section id="projects" class="section4">
+    <section id="section3">
         <div class="content">
-            <h2>Projects</h2>
-    
-            <!-- Project 1 -->
-            <div class="project-item">
-                <h3>Facial Attendance Machine (Python)</h3>
-                <p><strong>Technologies:</strong> Python, Deep Neural Networks</p>
-                <ul>
-                    <li>Designed and implemented a Python-based system to replace the college’s existing fingerprint biometric system, making it twice as fast and accurate.</li>
-                    <li>Utilized deep neural networks for facial recognition and attendance tracking, improving accuracy and speed compared to the existing system.</li>
-                    <li>Addressed usability issues faced by users with wet hands by providing a non-contact biometric solution.</li>
-                    <li>Ensured data integrity and security through robust Python file handling mechanisms.</li>
-                </ul>
+            <div class="study-details">
+                <div class="study-year" data-year="0">
+                    <h4>Secondary School (SSLC/10th)</h4>
+                    <p>St. Joseph's H S S, Paingottoor, Kerala</p>
+                    <ul>
+                        <li>I completed my Secondary School Leaving Certificate (SSLC) at St. Joseph's Higher Secondary School, Paingottoor, Kerala.<br> During my time at St. Joseph's, I dedicated myself to achieving academic excellence, culminating in an impressive overall score of 90% in the class 10 board examinations.</li>
+                        <li class="newli">Leadership Roles: Actively participated in school events and was entrusted with leadership roles, fostering skills in teamwork and responsibility.</li>
+                        <li class="newli">Extracurricular Achievements: Engaged in a range of extracurricular activities, including science fairs, debate competitions, and sports, which helped develop a well-rounded personality.</li>
+                        <li class="newli">Community Involvement: Volunteered for several community service initiatives organized by the school, contributing to social causes and learning the value of giving back to society.</li>
+                    </ul>
+                </div>
+                <div class="study-year" data-year="1">
+                    <h4>Higher Secondary School (Plus Two)</h4>
+                    <p>Mar Basil Higher Secondary School, Kothamanagalam, Kerala</p>
+                    <ul>
+                        <li>I joined Mar Basil Higher Secondary School in August 2016 to pursue my Higher Secondary education with a focus on the science stream. The curriculum included rigorous courses in Computer Science, Physics, Chemistry, and Mathematics, providing a comprehensive foundation for my academic and professional aspirations.</li>
+                    </ul>
+                </div>
+                <div class="study-year" data-year="2">
+                    <h4>Higher Secondary School (Plus Two)</h4>
+                    <p>Mar Basil Higher Secondary School, Kothamanagalam, Kerala</p>
+                    <ul>
+                        <li>In 2018, I successfully completed my Higher Secondary education at Mar Basil Higher Secondary School, achieving a commendable 78.5%.<br> My coursework included Computer Science, Physics, Chemistry, and Mathematics, each of which contributed significantly to my academic growth.</li>
+                        <li class="newli">Year of Passing: 2018</li>
+                        <li class="newli">Percentage Obtained: 78.5%</li>
+                        <li class="newli">Subjects Covered: Computer Science, Physics, Chemistry, Mathematics</li>
+                        <li>My time at Mar Basil Higher Secondary School fueled my passion for technology and problem-solving.<br> The comprehensive and challenging curriculum, especially in Computer Science, sparked my interest in software development.<br> This interest has since evolved into a dedicated pursuit, shaping my academic and career trajectory towards becoming a proficient software developer.</li>
+                        
+                    </ul>
+                </div>
+                <div class="study-year" data-year="3">
+                    <h4>Bachelor of Technology in Computer Science and Engineering (CSE)</h4>
+                    <p>Mar Baselios Institute of Technology and Science[MBITS], Kothamanagalm, Kerala</p>
+                    <ul>
+                        <li>I embarked on my Bachelor of Technology in Computer Science and Engineering (CSE) at APJ Abdul Kalam Technological University in August 2018.<br> This program equipped me with a strong technical foundation and practical skills across various aspects of computer science, preparing me for a career in software development and technology.</li>
+                    </ul>
+                </div>
+                <div class="study-year" data-year="4">
+                    <h4>Architecting with Google Compute Engine</h4>
+                    <p>Coursera</p>
+                    <ul>
+                        <li>I completed the Google Cloud Training specialization in Architecting with Google Compute Engine through Coursera, in collaboration with Mar Baselios Institute of Technology and Science.<br> This program provided me with a deep understanding of designing and deploying solutions on Google Cloud Platform (GCP), with a specific focus on Compute Engine.</li>
+                        <li class="newli">Course Duration: May 2021 – September 2021</li>
+                        <li class="newli">Certification: Google Cloud Training specialization in Architecting with Google Compute Engine</li>
+                    </ul>
+                </div>
+                <div class="study-year" data-year="5">
+                    <h4>Introduction to Internet of Things</h4>
+                    <p>NPTEL(Funded by the Ministry of HRD, Govt. of India)</p>
+                    <ul>
+                        <li>I completed the online course "Introduction to Internet of Things" offered by NPTEL, funded by the Ministry of HRD, Government of India.<br> This course provided a comprehensive overview of IoT concepts, architectures, and applications.</li>
+                        <li class="newli">Course Duration: July 2021 – October 2021</li>
+                        <li class="newli">Score: 58%</li>
+                        <li class="newli">IoT architectures<br> Sensor networks<br> Data acquisition techniques<br> Security considerations</li>
+                    </ul>
+                </div>
+                <div class="study-year" data-year="6">
+                    <h4>Python Full Stack Course</h4>
+                    <p>Pentagon Space</p>
+                    <ul>
+                        <li class="newli">Course Duration: December 2021 – May 2022</li>
+                        <li class="newli">Gained proficiency in front-end technologies: HTML, CSS, JavaScript.</li>
+                        <li class="newli">Developed expertise in version control: Git.</li>
+                        <li class="newli">Covered web development frameworks and RESTful API development.</li>
+
+                    </ul>
+                </div>
+                <div class="study-year" data-year="7">
+                    <h4>Bachelor of Technology in Computer Science and Engineering (CSE)</h4>
+                    <p>APJ Abdul Kalam Technological University, Kerala</p>
+                    <ul>
+                        <li>I graduated from APJ Abdul Kalam Technological University with a Bachelor of Technology in Computer Science and Engineering in August 2022, earning a CGPA of 7.43/10.<br> My coursework included a diverse range of subjects, each contributing to my expertise in the field of computer science.</li>
+                        <li class="newli">Year of Graduation: 2022</li>
+                        <li class="newli">CGPA: 7.43/10</li>
+                        <li class="newli">Relevant Courses: Object Oriented Programming; Data Structures and Algorithms; Data Warehousing; Computer Networks; Cryptography; Data Science; Database Management Systems</li>
+                        
+                    </ul>
+                </div>
+                <div class="study-year" data-year="8">
+                    <h4>Apprenticeship</h4>
+                    <p>AT&T Communications India Pvt. Ltd.</p>
+                    <ul>
+                        <li>I was selected on campus by AT&T Communications India Pvt. Ltd. to participate in an apprenticeship program.</li>
+                        <li class="newli">Location: Bengaluru</li>
+                        <li class="newli">Join Date: November 14, 2022</li>
+                    </ul>
+                </div>
+                <div class="study-year" data-year="9">
+                    <h4>Apprenticeship</h4>
+                    <p>AT&T Communications India Pvt. Ltd., Bengaluru</p>
+                    <ul>
+                        <li>During my apprenticeship at AT&T Communications India Pvt. Ltd., I was immersed in the Business Customer Experience BU at the Bengaluru office from November 14, 2022, to November 8, 2023.<br> I received extensive training on IP, OSPF, BGP, VLAN, STP, and QoS, contributing to service activations for Domain 1.0 customers based on configurations provided by lead engineers.<br> Recognized for my proactive approach and strong communication skills, I effectively collaborated with peers and external stakeholders, ensuring successful interactions and project outcomes.</li>
+                    </ul>
+                </div>
+                <div class="study-year" data-year="10">
+                    <h4>Google Cybersecurity Certificate</h4>
+                    <p>Coursera - Grow With Google</p>
+                    <ul>
+                        <li>I earned the Google Cybersecurity Certificate through Coursera's Grow With Google program from December 2023 to March 2024.<br> This certification signifies my proficiency in identifying and mitigating cybersecurity risks, threats, and vulnerabilities.</li>
+                        <li class="newli">Acquired hands-on experience with industry-standard tools including Python, Linux, SQL, SIEM tools, and IDS.</li>
+                        <li class="newli">Prepared for entry-level cybersecurity roles through completion of eight comprehensive Google-developed courses.</li>
+                    </ul>
+                </div>
+                <!-- Add more .study-year elements as needed -->
             </div>
-    
-            <!-- Project 2 -->
-            <div class="project-item">
-                <h3>Smart Farming Application (Java)</h3>
-                <p><strong>Technologies:</strong> Java, XML, Android Studio, SQLite</p>
-                <ul>
-                    <li>Designed and launched an Android application during Covid-19, enabling remote farm monitoring for individuals transitioning to farming.</li>
-                    <li>Addressed the challenge of monitoring farms remotely due to the distance between residences and farms, enhancing monitoring efficiency and security.</li>
-                    <li>Implemented real-time data access and visualization using Java, XML, and Android Studio.</li>
-                    <li>Utilized SQLite for efficient data storage and management on mobile devices.</li>
-                    <li>Designed user-friendly interfaces to provide intuitive farm management and monitoring features.</li>
-                </ul>
-            </div>
-            
         </div>
     </section>
-    
-    
-    <section id="experience" class="section5">
-        <div class="content">
-            <h2>Experience</h2>
-            <p>
-                Apprenticeship focused on the Business Customer Experience BU, gaining hands-on training and exposure to advanced network technologies including IP, OSPF, BGP, VLAN, STP, and QoS. Supported Domain 1.0 customers in service activations and performed basic post-implementation troubleshooting for network deployments under the guidance of lead engineers. Demonstrated excellent performance, proactivity, and strong communication and interpersonal abilities, effectively collaborating with peers and external stakeholders.
-              </p>
-        </div>
-    </section>
-    
-    <section id="contact" class="section6">
-        <div class="content">
-            <h2>Contact Me</h2>
-            <h3>GitHub</h3>
-            <h3>Linkedin</h3>
-            <h3>Instagram</h3>
-        </div>
-    </section>
-    <script src="script.js"></script>
 </body>
 </html>
