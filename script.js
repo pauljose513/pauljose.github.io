@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+
+    
     // Function to check if an element is in viewport
     function isInViewport(elem) {
         let bounding = elem.getBoundingClientRect();
@@ -70,7 +72,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 section.classList.remove('active');
             }
         });
-
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', (event) => {
+                // Delay to allow the scroll to the section to happen
+                setTimeout(updateNavigation, 10);
+            });
+        });
         // Adjust font size of h1 in section1 based on scroll position
         let scrollPosition = window.scrollY;
         let h1 = document.querySelector('.section1 h1');
@@ -145,8 +153,44 @@ document.addEventListener('DOMContentLoaded', function() {
             var selectedYear = this.value;
             updateContent(selectedYear);
             updateSliderValue();
+
+            const HidenSections = document.getElementsByClassName('hiddenSection');
+            const section3 = document.getElementById('section3');
+            if (section3.style.display === 'none') {
+                Array.from(HidenSections).forEach((link, index) => {
+                    const target = link.style.display = 'none';
+                    section3.style.display = 'block';
+                });
+            }
         });
     } else {
         console.error("Slider element not found.");
     }
+
+
+    const toggleLinks = Array.from(document.getElementsByClassName('toggle-link'));
+    const section3 = document.getElementById('section3');
+    const hiddenSections = Array.from(document.getElementsByClassName('hiddenSection'));
+
+    function findHiddenSection() {
+        return hiddenSections.find(section => section.style.display === 'none');
+    }
+
+    toggleLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); 
+            const targetId = link.getAttribute('data-target');
+            const targetSection = document.getElementById(targetId);
+
+            if (targetSection.style.display === 'none' || targetSection.style.display === '') {
+                hiddenSections.forEach(section => section.style.display = 'none');
+                section3.style.display = 'none';
+                targetSection.style.display = 'block'; 
+                
+            } else {
+                targetSection.style.display = 'none'; 
+                section3.style.display = 'block';
+            }
+        });
+    });
 });

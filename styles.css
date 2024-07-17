@@ -1,10 +1,9 @@
-
 body {
     margin: 0;
     padding: 0;
     font-family:'Courier New', Courier, monospace;
     overflow-x: hidden; /* Hide horizontal scrollbar */
-	background-color: ;
+	background-color:aquamarine ;
 }
 
 .section1 {
@@ -220,6 +219,19 @@ ul {
 }
 
 #section3 {
-	min-height: 50vb ;
+	display: block;
+	height: 60vb;
 	background-color: aquamarine;
+}
+
+.hiddenSection {
+	display: none; /* Initially hide the section */
+	height: 60vb;
+    display: flex;
+    justify-content:center;
+	margin-top: 0%;
+    align-items:center;
+	color: #eb0000;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
 }
