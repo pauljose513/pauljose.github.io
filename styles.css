@@ -11,20 +11,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #000000; /* Dark background color */
-    color: #4c00ffb6; /* Contrast text color */
+    flex-shrink: 1;
+    background-color: #000000;
+    color: #4c00ffb6;
     font-family: Arial, sans-serif;
-    transition: background-color 0.3s ease; /* Smooth background color transition */
+    transition: background-color 0.3s ease-in;
     position: relative;
-    z-index: 2; /* Ensure section1 is on top */
+    z-index: 2;
 }
 
 .section2 {
-    height: fit-content;
+
     display: flex;
+    height: fit-content;
     justify-content:center;
-	margin-top: 0%;
-    align-items:center;
+    align-items:flex-start;
+    flex-shrink: 1;
     background-color: #000000; /* Light background color */
     color: aquamarine; /* Contrast text color */
     font-family: 'Courier New', Courier, monospace;
@@ -35,37 +37,47 @@ body {
     text-align: center;
 }
 
+
+
 h1, h2 {
     font-size: 5vw; /* Responsive font size */
     font-weight: bold;
     margin: 0 10px; /* Add some padding for better readability on small screens */
-    transition: font-size 0.3s ease; /* Smooth font size transition */
-}
-h4 {
-	padding-top: 5vb;
-	font-size: 3vw;
-	font-weight:normal;
-	margin: 0 10px; /* Add some padding for better readability on small screens */
-    transition: font-size 0.3s ease; /* Smooth font size transition */
+    transition: font-size 0.0s ease-in; /* Smooth font size transition */
 }
 
-ul {
-	list-style-type:"";
-	justify-content: center;
-	padding-left: 10vb;
-	padding-right: 10vb;
-}
 /* Media query for smaller screens */
-@media (max-width: 600px) {
+@media (max-width: 300px) {
     h1, h2 {
-        font-size: 7vw;
+        font-size: 5vw;
+    }
+    h4 {
+        font-size: 2vw;
+    }
+    ul {
+        font-size: 1.5vw;
+    }
+    .section3 {
+        height: 40vb;
     }
 }
-.newli {
-	padding: 10px;
-	text-align: left;
-	padding-left: 15vb;
+
+/* Fallback for very large screens */
+@media (min-width: 1200px) {
+    h1, h2 {
+        font-size: 5vw;
+    }
+    h4 {
+        font-size: 2vw;
+    }
+    ul {
+        font-size: 1.5vw;
+    }
+    .section3 {
+        height: 60vb;
+    }
 }
+
 
 .navbar {
     position: fixed;
@@ -79,6 +91,7 @@ ul {
 
 .navbar ul {
     display: flex;
+    flex-shrink: 1;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -122,18 +135,21 @@ ul {
     position: relative;
     height: 20px;
     margin-bottom: 10px;
+    
 }
 
 .slider-label {
     position: absolute;
     transform: translateX(-50%);
-    font-size: 12px;
+    font-size: .9vw;
     color: #333;
+    justify-content: space-around;
 }
 
 #year-slider {
     width: 100%;
-    margin-top: 20px;
+    margin-top: .5vw;
+    flex-shrink: 1;
 }
 
 /* Webkit browsers (Chrome, Safari) */
@@ -219,9 +235,40 @@ ul {
 }
 
 #section3 {
-	display: block;
+	display: flex;
 	height: 60vb;
-	background-color: aquamarine;
+    flex-shrink: 1;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+p {
+    font-size: 2vw;
+}
+
+h4 {
+	padding-top: 10px;
+	font-size: 2vw;
+	font-weight:bold;
+	margin: 0 10px; /* Add some padding for better readability on small screens */
+    transition: font-size 0.0s ease; /* Smooth font size transition */
+}
+
+ul {
+	list-style-type: none;
+    font-size: 1.3vw;
+}
+
+.newli {
+    list-style: circle;
+	text-align: left;
+    padding: 1vh;
+}
+
+#current-value {
+    color: aquamarine;
+    font-size: 1.5vw;
 }
 
 .hiddenSection {
