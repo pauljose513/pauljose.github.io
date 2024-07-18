@@ -90,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
         let initialFontColor = computedStyle.color;
 
         // Calculate new font size
-        let newSize = initialFontSize - (scrollPosition * 0.02); // Adjust the factor as needed
+        let newSize = initialFontSize - (scrollPosition * 0.01); // Adjust the factor as needed
 
         // Ensure font size doesn't go below a minimum size
-        let minSize = 3; // Minimum font size in vw
+        let minSize = 2.5; // Minimum font size in vw
         newSize = Math.max(newSize, minSize);
 
        // Calculate new opacity based on scroll position

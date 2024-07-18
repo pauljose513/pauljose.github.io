@@ -43,7 +43,7 @@ h1, h2 {
     font-size: 5vw; /* Responsive font size */
     font-weight: bold;
     margin: 0 10px; /* Add some padding for better readability on small screens */
-    transition: font-size 0.0s ease-in; /* Smooth font size transition */
+    transition: font-size 0.003s ease; /* Smooth font size transition */
 }
 
 /* Media query for smaller screens */
